@@ -1,9 +1,7 @@
-def app_4
+def app_4(string):
     def char_split(string):
         return list(string)
 
-
-    string = str(input("Παρακαλώ εισάγετε ένα string: "))
     x = char_split(string)
     b = len(x)
     i = 0
@@ -25,3 +23,7 @@ def app_4
         print(
             "Ο αριθμός που προκύπτει από την μετατροπή του αρχικού string σε αναπαράσταση ASCII είναι πρώτος και είναι ο: " + str(
                 joined_asc))
+
+
+# Κλήση συνάρτησης για έλεγχο λειτουργικότητας
+app_4(input("Εισάγετε ένα string: "))
