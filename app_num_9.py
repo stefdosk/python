@@ -1,5 +1,13 @@
-num1 = float(input("Εισάγετε έναν αριθμό: "))
-num = abs(int(num1))
+pos_int = False
+while not pos_int:
+    try:
+        num = int(input("Εισάγετε έναν ακέραιο θετικό αριθμό: "))
+        if num > 0:
+            pos_int = True
+        else:
+            print("Ο αριθμός που εισάγατε δεν ήταν θετικός ακέραιος.")
+    except ValueError:
+        print("Ο αριθμός που εισάγατε δεν ήταν θετικός ακέραιος.")
 res = (num * 3) + 1
 dig_num = int(len(str(res)))
 i = 0
@@ -10,6 +18,7 @@ while i <= dig_num:
     res = res // 10
     i += 1
 if sum1 // 10 != 0:
+    sum1 = (sum1 * 3) + 1
     for i in range(0, 2):
         sum2 += sum1 % 10
         sum1 = sum1 // 10
